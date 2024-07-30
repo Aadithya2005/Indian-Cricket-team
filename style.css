@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    background-image: url(https://th.bing.com/th/id/R.e73a778a9acbd3086ac2f3e714de7167?rik=2Xk0UR85nsd5eg&riu=http%3a%2f%2fwww.clicknow.in%2fwp-content%2fuploads%2f2024%2f06%2fhow-much-prize-money-india-earned-after-t20-world-cup-2024-triumph.jpg&ehk=7MTkIdeMcS3eNtXn21aKHgPu5%2bfZKxHMLUDIbkovjmY%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    width: 70vw;
+    overflow: auto;
+    padding: 100px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.slider::-webkit-scrollbar{
+    width: 0;
+}
+.slider .form{
+    width: max-content;
+    --left: 0;
+    transform: translateX(var(--left));
+}
+.title{
+    padding: 20px 0;
+    color: orange;
+    text-shadow: 
+    0 0 5px #fff, 
+    0 0 10px #fff, 
+    0 0 15px #fff, 
+    0 0 20px #005eff, 
+    0 0 30px #0022ff, 
+    0 0 40px #005eff, 
+    0 0 55px #0022ff, 
+    0 0 75px #005eff;
+    font-weight:bolder;
+    font-size:xx-large;
+    justify-content: center;
+}
+.slider .form .item{
+    width: 200px;
+    height: 300px;
+    display: inline-block;
+    margin-right: 20px;
+    transform: perspective(10px);
+    transform-style: preserve-3d;
+}
+.slider .form .item .content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .5s;
+}
+.slider .form .item .content .des{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-family: monospace;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.slider .form .item .content .des button{
+    background-color: #eee;
+    border: none;
+    border-radius: 10px;
+    font-size: small;
+}
+.slider .form.left .item .content{
+    transform: rotateY(-1deg) scale(0.8);
+}
+.slider .form.right .item .content{
+    transform: rotateY(1deg) scale(0.8);
+}
+.slider .form .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
